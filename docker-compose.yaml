@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - web-porto:/usr/share/nginx/html
+    container_name: web-porto
+    restart: always
+    ports:
+      - 8080:80
+
+volumes:
+    web-porto:
